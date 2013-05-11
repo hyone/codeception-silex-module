@@ -1,0 +1,26 @@
+{
+  "name": "hyone/codeception-silex-module",
+  "description": "Silex module for Codeception functional testing",
+  "keywords": ["Codeception","Silex"],
+  "homepage": "https://example.com/",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "hyone",
+      "email": "hyone.development@gmail.com",
+      "homepage":"https://github.com/hyone"
+    }
+  ],
+
+  "autoload": {
+    "psr-0": {
+      "Codeception\\Module\\Silex": "src/"
+    }
+  },
+
+  "require": {
+    "silex/silex": "*",
+    "codeception/codeception": "~1.6.1"
+  }
+}

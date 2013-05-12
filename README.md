@@ -69,3 +69,7 @@ class FooCest
 Run test
 
     $ vendor/bin/codecept run functional --debug
+
+## Demo Project
+
+https://github.com/hyone/silex-formapp-example

@@ -21,6 +21,6 @@
 
   "require": {
     "silex/silex": "*",
-    "codeception/codeception": "~1.6.1"
+    "codeception/codeception": "~1.6"
   }
 }

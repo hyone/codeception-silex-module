@@ -15,12 +15,11 @@ class Silex extends \Codeception\Util\Framework
 
     public function _initialize()
     {
-        $this->kernel = $this->createApplication();
     }
 
     public function _before(\Codeception\TestCase $test)
     {
-        // $this->kernel = $this->createApplication();
+        $this->kernel = $this->createApplication();
         $this->client = new Client($this->kernel, array());
         $this->client->followRedirects(true);
     }

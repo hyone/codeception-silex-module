@@ -30,7 +30,12 @@ class Silex extends \Codeception\Util\Framework
 
     protected function createApplication()
     {
-        $app = require \Codeception\Configuration::projectDir() . $this->config['app_path'];
+        if (isset($this->config['app_class'])) {
+            $app = new $this->config['app_class'];
+        } else {
+            $app = require \Codeception\Configuration::projectDir() . $this->config['app_path'];
+        }
+
         $app['debug'] = true;
         $app['session.test'] = $this->config['session.test'];
         $app['exception_handler']->disable();

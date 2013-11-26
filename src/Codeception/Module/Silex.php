@@ -9,6 +9,7 @@ class Silex extends \Codeception\Util\Framework
 {
     protected $config = array(
         'app_path'     => 'app.php',
+        'app_values'     => array(),
         'session.test' => false
     );
     public $app;
@@ -31,7 +32,8 @@ class Silex extends \Codeception\Util\Framework
     protected function createApplication()
     {
         if (isset($this->config['app_class'])) {
-            $app = new $this->config['app_class'];
+            $values = $this->config['app_values'];
+            $app = new $this->config['app_class']($values);
         } else {
             $app = require \Codeception\Configuration::projectDir() . $this->config['app_path'];
         }
